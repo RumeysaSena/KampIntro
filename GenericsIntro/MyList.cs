@@ -8,6 +8,8 @@ namespace GenericsIntro
     {
         T[] items;
         //constructor
+        //item:öğe
+        //tempArray: geçiciDizi
         public MyList()
         {
             items = new T[0];
