@@ -11,8 +11,8 @@ namespace OOP3
             IKrediManager tasitKrediManager = new TasitKrediManager();
             IKrediManager konutKrediManager = new KonutKrediManager();
             IKrediManager esnafKrediManager = new EsnafKredisiManager();
-           
-            ILoggerService databaseLoggerService = new DatabaseLoggerService(); 
+
+            ILoggerService databaseLoggerService = new DatabaseLoggerService();
             ILoggerService fileLoggerService = new FileLoggerService();
             ILoggerService smsLoggerService = new SmsLoggerService();
 
