@@ -11,9 +11,9 @@ select * from Products order by ProductName
 
 select * from Products order by CategoryID , ProductName
 
-select * from Products order by UnitPrice asc -- ascending / artan
+select * from Products order by UnitPrice asc -- ascending /artan
 
-select * from Products order by UnitPrice desc -- descending / düşen
+select * from Products order by UnitPrice desc -- descending /düşen
 
 select * from Products where CategoryID=1 order by UnitPrice desc
 
