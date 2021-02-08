@@ -57,6 +57,7 @@ on p.ProductID = od.ProductID
 -- örn ; hiç satış yapamadığımız ürünleri göster dersek; left join , solda olup(ürünler tablosunda var ama hiç satış yok ) sağda olmayanları da getir demek.
 select * from Products p left join [Order Details] od
 on p.ProductID = od.ProductID
+
 -- örn sistemimize kayıt olup hiç sipariş girişi yapılmamış müşreilere özel kampanya vs yapılmak isteniyor. aktif müşteri ;
 select * from Customers c left join Orders o -- (solda(customer) olup sağda(sipariş) olmayanları da (müşteride olup siparişte olmayanları)
 on c.CustomerID=o.CustomerID
@@ -70,4 +71,4 @@ where o.CustomerID is null -- null : data yok
 select * from Products p inner join [Order Details] od
 on p.ProductID = od.ProductID
 inner join Orders o -- bir join daha eklemek istiyorsak devamına bir inner join daha ekleriz. 
-on o.OrderID=od.OrderID
+on o.OrderID=od.OrderID 
