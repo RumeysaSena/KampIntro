@@ -39,17 +39,20 @@ select categoryID , count(*)  from Products where UnitPrice>20  group by Categor
 
 -- join(birleştrimek) CategoryId yerine categoryName getirmek daha doğru bu yüzden bu tabloları coinle birleştirirz.
 
-select * 
-from products inner join Categories --buradaki from tek başına products değil, hem products hemde kategorilerin bir araya getirilmiş şekli anlamına geliyor. 
+select * from products inner join Categories --buradaki from tek başına products değil, hem products hemde kategorilerin bir araya getirilmiş şekli anlamına geliyor. 
 on Products.CategoryID = Categories.CategoryID -- neye göre birleştirip yazılacağı koşulunu "on" ile yazarız. 
 
-select Products.ProductID, Products.ProductName , Products.UnitPrice, Categories.CategoryName -- * tüm kolunlar demek. * yerine hangi kategoride neyi istediğimizi seçebiliriz.
+select Products.ProductID, Products.ProductName , Products.UnitPrice, Categories.CategoryName -- * tüm kolonlar demek. * yerine hangi kategoride neyi istediğimizi seçebiliriz.
 from products inner join Categories
 on Products.CategoryID = Categories.CategoryID 
 
 --DTO Data Transformation Object- 
 
--- inner join sadece iki tablodada eşleşenleri bir araya getirir. eşleşmeyen data varsa onu getirmez.
+-- (inner)join : Her iki tabloda da eşleşen değerlere sahip kayıtları döndürür. eşleşmeyen data varsa onu getirmez.
+-- LEFT (OUTER) JOIN : Soldaki tablodan tüm kayıtları ve sağ tablodan eşleşen kayıtları döndürür.
+-- RIGHT (OUTER) JOIN:  Sağ tablodan tüm kayıtları ve soldaki tablodan eşleşen kayıtları döndürür.
+-- FULL (OUTER) JOIN: Sol veya sağ tabloda bir eşleşme olduğunda tüm kayıtları döndürür
+
 
 select * from Products p inner join [Order Details] od -- boşluk isimlendirme standartlarında doğru değil, o yüzden farklı bir kodmuş gibi algılamasın diye SQL'de köşeli parantez içine alınır.
 on p.ProductID = od.ProductID
