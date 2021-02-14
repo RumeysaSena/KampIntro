@@ -10,17 +10,17 @@ namespace GameProject.Concrete
     {
         public void Add(Game game)
         {
-            Console.WriteLine(game.GameName + "Eklendi.");
+            Console.WriteLine(game.GameName + "Eklendi." + '\n');
         }
 
         public void Delete(Game game)
         {
-            Console.WriteLine(game.GameName + "Silindi.");
+            Console.WriteLine(game.GameName + "Silindi." + '\n');
         }
 
         public void UpDate(Game game)
         {
-            Console.WriteLine(game.GameName + "Güncellendi.");
+            Console.WriteLine(game.GameName + "Güncellendi." + '\n');
         }
     }
 }

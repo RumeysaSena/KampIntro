@@ -10,4 +10,5 @@ namespace GameProject.Concrete
         {
             return true;
         }
-}   }
+    }
+}

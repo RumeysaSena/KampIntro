@@ -1,14 +1,15 @@
-﻿using System;
+﻿using GameProject.Entities;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace GameProject
 {
-   public interface IGamerService
+    public interface IGamerService
     {
-        void Add(Gamer gamer);
-        void Update(Gamer gamer);
-        void Delete(Gamer gamer);
+        public void Add(Gamer gamer);
+        public void Update(Gamer gamer);
+        public void Delete(Gamer gamer);
 
     }
 }

@@ -6,7 +6,7 @@ namespace GameProject.Entities
 {
     public class Game
     {
-        public int Id { get; set; }
+        public int GameId { get; set; }
         public string GameName { get; set; }
         public int GamePrice { get; set; }
     }

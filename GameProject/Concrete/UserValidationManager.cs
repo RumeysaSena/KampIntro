@@ -6,6 +6,7 @@ namespace GameProject
 {
     public class UserValidationManager : IUserValidationService
     {
+
         public bool Validate(Gamer gamer)
         {
             if (gamer.Id == 1 && gamer.BirthYear == 1994 && gamer.FirstName == "RUMEYSA" && gamer.LastName == "ÖZDEMİR" && gamer.IdentityNumber == 12345)
@@ -13,7 +14,7 @@ namespace GameProject
             {
                 return true;
             }
-            else if (gamer.Id == 2 && gamer.BirthYear == 2020 && gamer.FirstName == "ZEHRA"&& gamer.LastName == "ZEYREK" && gamer.IdentityNumber == 789456)
+            else if (gamer.Id == 2 && gamer.BirthYear == 2020 && gamer.FirstName == "ZEHRA" && gamer.LastName == "ZEYREK" && gamer.IdentityNumber == 789456)
             {
                 return true;
             }
@@ -21,12 +22,7 @@ namespace GameProject
             {
                 return false;
             }
-                  
+
         }
     }
 }
-
-          
-
-   
-

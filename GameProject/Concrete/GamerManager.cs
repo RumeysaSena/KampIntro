@@ -5,7 +5,7 @@ using System.Text;
 namespace GameProject
 {
     //MicroService
-    
+
     public class GamerManager : IGamerService
     {
         // Eğer bir sınıfın içerisinde başka bir sınıfı kullanmak istiyorsak asla onu new'leme! 
@@ -17,24 +17,41 @@ namespace GameProject
 
         public void Add(Gamer gamer)
         {
-            if (_userValidationService.Validate(gamer)==true)
+            if (_userValidationService.Validate(gamer) == true)
             {
-                Console.WriteLine("Kayıt oldu");
+                Console.WriteLine(gamer.FirstName + " Kayıt oldu" + '\n');
             }
             else
             {
-                Console.WriteLine("Doğrulama başarısız. Kayıt Başarısız.");
-            }            
+                Console.WriteLine("Doğrulama başarısız. Kayıt Başarısız." + '\n');
+            }
         }
 
         public void Delete(Gamer gamer)
         {
-            Console.WriteLine("Kayıt silindi");
+            if (_userValidationService.Validate(gamer) == true)
+            {
+                Console.WriteLine(gamer.FirstName + "'nın kaydı silindi" + '\n');
+            }
+            else
+            {
+                Console.WriteLine("Doğrulama başarısız. Kayıt Başarısız." + '\n');
+            }
+        
         }
 
         public void Update(Gamer gamer)
         {
-            Console.WriteLine("Kayıt güncellendi");
+            if (_userValidationService.Validate(gamer) == true)
+            {
+                Console.WriteLine(gamer.FirstName + "'nın kaydı güncellendi" + '\n');
+            }
+            else
+            {
+                Console.WriteLine("Doğrulama başarısız. Kayıt Başarısız." + '\n');
+            }
+            
         }
+
     }
 }
