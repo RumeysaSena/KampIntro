@@ -7,9 +7,9 @@ namespace GameProject
 {
     public interface IGamerService
     {
-        public void Add(Gamer gamer);
-        public void Update(Gamer gamer);
-        public void Delete(Gamer gamer);
+        void Add(Gamer gamer);
+        void Update(Gamer gamer);
+        void Delete(Gamer gamer);
 
     }
 }

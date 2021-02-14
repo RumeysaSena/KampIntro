@@ -7,7 +7,7 @@ namespace GameProject.Abstract
 {
     public interface ISalesService
     {
-        public void Sales(Game game, Gamer gamer);
-        public void CampaignSales(Game game, Gamer gamer, Campaign campaign);
+        void Sales(Game game, Gamer gamer);
+        void CampaignSales(Game game, Gamer gamer, Campaign campaign);
     }
 }
